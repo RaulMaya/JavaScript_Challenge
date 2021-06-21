@@ -21,7 +21,9 @@ data.forEach((element) => {
 
 // Create the function to run for both events
 function runEnter() {
-  $("#table_of_items tr").remove(); 
+  
+  d3.select('tbody').html('')
+
   // Prevent the page from refreshing
   d3.event.preventDefault();
 
