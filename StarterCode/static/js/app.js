@@ -1,15 +1,15 @@
 // from data.js
 var tableData = data;
 
-// Select the button and the form
-var button = d3.select("#button");
-var form = d3.select("#form");
+// Select the button
+var button = d3.select("#filter-btn");
+var form = d3.select("#datetime");
 
-// Creating the event handlers
+// Create event handlers for clicking the button or pressing the enter key
 button.on("click", runEnter);
-form.on("submit", runEnter)
+form.on("submit", runEnter);
 
-// YOUR CODE HERE!
+
 var tbody = d3.select("tbody");
 
 data.forEach((element) => {
@@ -18,3 +18,19 @@ data.forEach((element) => {
     row.append("td").text(value);
   })
 });
+
+// Create the function to run for both events
+function runEnter() {
+  // Prevent the page from refreshing
+  d3.event.preventDefault();
+
+  // Select the input element and get the raw HTML node
+  var dateElement = d3.select("#datetime");
+
+  // Get the value property of the input element
+  var dateValue = dateElement.property("value");
+
+  var filterDate = tableData.filter(sights => sights.datetime === dateValue);
+  // Print the value to the console
+  console.log(filterDate);
+}
