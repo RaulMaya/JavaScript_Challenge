@@ -21,7 +21,7 @@ data.forEach((element) => {
 
 // Create the function to run for both events
 function runEnter() {
-  
+
   d3.select('tbody').html('')
 
   // Prevent the page from refreshing
@@ -32,14 +32,21 @@ function runEnter() {
 
   // Get the value property of the input element
   var dateValue = dateElement.property("value");
-
-  var filterDate = tableData.filter(sights => sights.datetime === dateValue);
-  // Print the value to the console
-  filterDate.forEach((element) => {
-    var row = tbody.append("tr");
-    Object.values(element).forEach((value)=>{
-      row.append("td").text(value);
-    })
-  });
-
+  if (dateValue === ""){
+    data.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  } else {
+    var filterDate = tableData.filter(sights => sights.datetime === dateValue);
+    // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
 }
