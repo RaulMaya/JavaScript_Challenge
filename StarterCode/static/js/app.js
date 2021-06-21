@@ -21,6 +21,7 @@ data.forEach((element) => {
 
 // Create the function to run for both events
 function runEnter() {
+  $("#table_of_items tr").remove(); 
   // Prevent the page from refreshing
   d3.event.preventDefault();
 
@@ -32,5 +33,11 @@ function runEnter() {
 
   var filterDate = tableData.filter(sights => sights.datetime === dateValue);
   // Print the value to the console
-  console.log(filterDate);
+  filterDate.forEach((element) => {
+    var row = tbody.append("tr");
+    Object.values(element).forEach((value)=>{
+      row.append("td").text(value);
+    })
+  });
+
 }
