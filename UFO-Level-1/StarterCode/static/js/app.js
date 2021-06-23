@@ -32,7 +32,8 @@ function runEnter() {
 
   // Get the value property of the input element
   var dateValue = dateElement.property("value");
-  if (dateValue === ""){
+
+  if (dateValue === "" ){
     data.forEach((element) => {
       var row = tbody.append("tr");
       Object.values(element).forEach((value)=>{
