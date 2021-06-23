@@ -47,16 +47,262 @@ function runEnter() {
   console.log(countryValue)
   console.log(shapeValue)
 
-  if (dateValue === "" ){
+  //No Filters Filled
+  if (dateValue === "" && cityValue === "" && stateValue === "" && countryValue === "" && shapeValue === "") {
     data.forEach((element) => {
       var row = tbody.append("tr");
       Object.values(element).forEach((value)=>{
         row.append("td").text(value);
       })
     });
-  } else {
-    var filterDate = tableData.filter(sights => sights.datetime === dateValue);
-    // Print the value to the console
+  }
+
+  //All Filters Filled
+  if (dateValue !== "" && cityValue !== "" && stateValue !== "" && countryValue !== "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.city === cityValue && sights.state === stateValue && sights.country === countryValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Individual Filled
+
+  if (dateValue !== "" && cityValue === "" && stateValue === "" && countryValue === "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  if (dateValue === "" && cityValue !== "" && stateValue === "" && countryValue === "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.city === cityValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  if (dateValue === "" && cityValue === "" && stateValue !== "" && countryValue === "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.state === stateValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  if (dateValue === "" && cityValue === "" && stateValue === "" && countryValue !== "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.country === countryValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  if (dateValue === "" && cityValue === "" && stateValue === "" && countryValue === "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  // 2 Combinations Filters
+
+  //Date-City
+  if (dateValue !== "" && cityValue !== "" && stateValue === "" && countryValue === "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.city === cityValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Date-State
+  if (dateValue !== "" && cityValue === "" && stateValue !== "" && countryValue === "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.state === stateValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Date-Country
+  if (dateValue !== "" && cityValue === "" && stateValue === "" && countryValue !== "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.country === countryValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Date-Shape
+  if (dateValue !== "" && cityValue === "" && stateValue === "" && countryValue === "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //City-State
+  if (dateValue === "" && cityValue !== "" && stateValue !== "" && countryValue === "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.city === cityValue && sights.state === stateValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //City-Country
+  if (dateValue === "" && cityValue !== "" && stateValue === "" && countryValue !== "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.city === cityValue && sights.country === countryValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //City-Shape
+  if (dateValue === "" && cityValue !== "" && stateValue === "" && countryValue === "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.city === cityValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //State-Country
+  if (dateValue === "" && cityValue === "" && stateValue !== "" && countryValue !== "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.state === stateValue && sights.country === countryValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //State-Shape
+  if (dateValue === "" && cityValue === "" && stateValue !== "" && countryValue === "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.state === stateValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+//Country-Shape
+  if (dateValue === "" && cityValue === "" && stateValue === "" && countryValue !== "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.shape === shapeValue && sights.country === countryValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  // 3 Combinations
+  // 4 Combinations
+
+  //Date Out
+  if (dateValue === "" && cityValue !== "" && stateValue !== "" && countryValue !== "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.city === cityValue && sights.state === stateValue && sights.country === countryValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //City Out
+  if (dateValue !== "" && cityValue === "" && stateValue !== "" && countryValue !== "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.state === stateValue && sights.country === countryValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //State Out
+  if (dateValue !== "" && cityValue !== "" && stateValue === "" && countryValue !== "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.city === cityValue && sights.country === countryValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Country Out
+  if (dateValue !== "" && cityValue !== "" && stateValue !== "" && countryValue === "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.city === cityValue && sights.state === stateValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Shape Out
+  if (dateValue !== "" && cityValue !== "" && stateValue !== "" && countryValue !== "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.city === cityValue && sights.state === stateValue && sights.country === countryValue);
+      // Print the value to the console
     filterDate.forEach((element) => {
       var row = tbody.append("tr");
       Object.values(element).forEach((value)=>{
