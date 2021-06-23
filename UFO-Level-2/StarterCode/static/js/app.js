@@ -249,6 +249,113 @@ function runEnter() {
   }
 
   // 3 Combinations
+  //Data-City-State
+  if (dateValue !== "" && cityValue !== "" && stateValue !== "" && countryValue === "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.city === cityValue && sights.state === stateValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Date-City-Country
+  if (dateValue !== "" && cityValue !== "" && stateValue === "" && countryValue !== "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.city === cityValue && sights.country === countryValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Date-City-Shape
+  if (dateValue !== "" && cityValue !== "" && stateValue === "" && countryValue === "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.city === cityValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Date-State-Country
+  if (dateValue !== "" && cityValue === "" && stateValue !== "" && countryValue !== "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.state === stateValue && sights.country === countryValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Date-State-Shape
+  if (dateValue !== "" && cityValue === "" && stateValue !== "" && countryValue === "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.state === stateValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //Date-Country-Shape
+  if (dateValue !== "" && cityValue === "" && stateValue === "" && countryValue !== "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.datetime === dateValue && sights.country === countryValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //City-State-Country
+  if (dateValue === "" && cityValue !== "" && stateValue !== "" && countryValue !== "" && shapeValue === "") {
+    var filterDate = tableData.filter(sights =>sights.city === cityValue && sights.state === stateValue && sights.country === countryValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //City-Country-Shape
+  if (dateValue === "" && cityValue !== "" && stateValue === "" && countryValue !== "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.city === cityValue && sights.country === countryValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
+
+  //State-Country-Shape
+  if (dateValue === "" && cityValue === "" && stateValue !== "" && countryValue !== "" && shapeValue !== "") {
+    var filterDate = tableData.filter(sights =>sights.state === stateValue && sights.country === countryValue && sights.shape === shapeValue);
+      // Print the value to the console
+    filterDate.forEach((element) => {
+      var row = tbody.append("tr");
+      Object.values(element).forEach((value)=>{
+        row.append("td").text(value);
+      })
+    });
+  }
   // 4 Combinations
 
   //Date Out
