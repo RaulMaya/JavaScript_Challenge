@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Ubuntu, sans-serif;
+  font-family: Monospace, Monaco;
 }
 
 html,
@@ -48,12 +48,11 @@ body {
 /* This CSS styles the ufo icon in the navbar */
 .nav-ufo {
   position: absolute;
-  bottom: 5px;
-  left: 150px;
+  bottom: 6px;
+  left: 165px;
   width: 35px;
   color: white;
 }
-
 /* Adding styles to the aside and filter form */
 .ufo-form {
   margin-top: 50px;
@@ -64,28 +63,69 @@ body {
 }
 
 .filters {
-  margin-top: 10px;
+  margin-top: 0px;
+
 }
 
+.panel{
+  background: #000000;
+}
+.filter{
+  background: #000000;
+
+}
+.btn-default{
+  position: absolute;
+  top: 500px;
+  left: 30px;
+  background: #F3C03A;
+  border-style: solid;
+  border-width: 2.5px;
+  border-color: #000000;
+  color: #000000;
+}
+
+.btn-default:hover {
+  color: #000000;
+  background-color: white;
+  border-style: solid;
+  border-width: 2.5px;
+  border-color: #000000;
+}
 select {
   display: block;
   width: 100%;
   padding: 8px;
-  color: #8e979f;
+  color: #B86FF0;
   outline: none;
   background: #641ADA;
 }
-
-#table-area th {
+.table-head{
+  background-color: #000000;
+  color: #A784FF;
   text-align: center;
-  background: #000000;;
+}
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 2.5px solid #000000;
+  background-color: #84A1FF;
+  color: #000000;
+  font-family: Monospace, Monaco;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-#table-area th:first-child,
-#table-area th:nth-child(2),
-#table-area th:nth-child(6) {
-  min-width: 70px;
+th, td {
+  text-align: center;
+  padding: 16px;
 }
+
+tr:nth-child(even) {
+  background-color: #BAD0FF;
+}
+
 
 .loader {
   margin-top: 50px;
