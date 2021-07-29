@@ -1,69 +1,71 @@
-# JavaScript Homework - JavaScript and DOM Manipulation
+<center><h1><u>UFO Search</u></h1>
 
-## Background
+![Rick and Morty](images/rick_n_morty.jpg)</center>
 
-WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `ALIENS-R-REAL` have collected all of the eye-witness reports we could to prove it! All we need to do now is put this information online for the world to see and then the matter will finally be put to rest.
+<hr>
 
-There is just one tiny problem though... our collection is too large to search through manually. Even our most dedicated followers are complaining that they are having trouble locating specific reports in this mess.
+### Tools:
+ * JavaScript
+ * D3.js
+ * HTML
+ * CSS
 
-That's why we are hiring you. We need you to write code that will create a table dynamically based upon a [dataset we provide](StarterCode/static/js/data.js). We also need to allow our users to filter the table data for specific values. There's a catch though... we only use pure JavaScript, HTML, and CSS, and D3.js on our web pages. They are the only coding languages which can be trusted.
 
-You can handle this... right? The planet Earth needs to know what we have found!
+ <hr>
 
-## Your Task
+ ### Background
 
-### Before You Begin
+ The USA Government provide a [dataset](UFO-Level-2/StarterCode/static/js/data.js) with several UFO Sights across the world. The problem is that there is a lot of data stored in the [dataset](UFO-Level-2/StarterCode/static/js/data.js), that it makes really difficult to look for a specific sight. So, we need you to write code that will create a table dynamically based upon a dataset we provide. We also need to allow our users to filter the table data for specific values. There's a catch though we only use pure JavaScript, HTML, and CSS, and D3.js on our web pages.
 
-1. Create a new repository for this project called `javascript-challenge`. **Do not add this homework to an existing repository**.
+ <hr>
 
-2. Clone the new repository to your computer.
+ ### How the page work?
 
-3. Inside your local git repository, create a directory for the Javascript challenge. Use the folder names to correspond to the challenges: **UFO-level-1** and **UFO-level-2**.
 
-4. Add your **html** files to this folder as well as your static folder containing your javascript. This will be the main script to run for analysis.
+ * The page is upload in Git Hub Pages, as [UFO-FINDER](https://raulmaya.github.io/UFO-Search/)
+ ![GitHub](images/github.jpg)
+ <br>
 
-5. Push the above changes to GitHub or GitLab.
+ * When you open the [UFO-FINDER](https://raulmaya.github.io/UFO-Search/) page you will get a starting index page, like this:
+ ![GitHub](images/img1.png)
+ <br>
 
-6. Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
+ * If you scroll down a little bit, you will get the complete table, powered by the [dataset](UFO-Level-2/StarterCode/static/js/data.js):
+ ![GitHub](images/img2.png)
+ <br>
 
-### Level 1: Automatic Table and Date Search (Required)
+ * In the filter control in your left, you will find that you can filter by:
+  * Date:
+    ![GitHub](images/img3.png)
+    <br>
 
-* Create a basic HTML web page or use the [index.html](StarterCode/index.html) file provided (we recommend building your own custom page!).
+  * City:
+    ![GitHub](images/img4.png)
+    <br>
 
-* Using the UFO dataset provided in the form of an array of JavaScript objects, write code that appends a table to your web page and then adds new rows of data for each UFO sighting.
+  * State:
+    ![GitHub](images/img5.png)
+    <br>
 
-  * Make sure you have a column for `date/time`, `city`, `state`, `country`, `shape`, and `comment` at the very least.
+  * Country:
+    ![GitHub](images/img6.png)
+    <br>
 
-* Use a date form in your HTML document and write JavaScript code that will listen for events and search through the `date/time` column to find rows that match user input.
+  * Shape:
+    ![GitHub](images/img7.png)
+    <br>
 
-### Level 2: Multiple Search Categories (Optional)
+  * Or all of them:
+  ![GitHub](images/img8.png)
+  <hr>
 
-* Complete all of Level 1 criteria.
 
-* Using multiple `input` tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
+### Contact:
 
-  1. `date/time`
-  2. `city`
-  3. `state`
-  4. `country`
-  5. `shape`
+* Name: Raul Maya Salazar
+* Phone: +52 833 159 7006
+* E-mail: raulmayas20@gmail.com
+* GitHub: https://github.com/RaulMaya
+* LinkedIn: https://www.linkedin.com/in/raul-maya/
 
-- - -
-
-### Dataset
-
-* [UFO Sightings Data](StarterCode/static/js/data.js)
-
-- - -
-
-## Rubric
-
-[Unit 14 Rubric - JavaScript Homework - JavaScript and DOM Manipulation](https://docs.google.com/document/d/1KWNS-xCwYBONjvlrIz4zyGkcUu0mP2kpMQh6qj0hKf8/edit?usp=sharing)
-
-- - -
-
-**Good luck!**
-
-- - -
-
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+<hr>
